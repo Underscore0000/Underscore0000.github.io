@@ -1,0 +1,95 @@
+/* ==========================================================================
+   HOVER / MICRO-INTERACTIONS
+   ========================================================================== */
+.btn::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.25), transparent 55%);
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-out);
+  z-index: -1;
+}
+.btn:hover::after{ opacity: 1; }
+.btn:active{ transform: scale(0.97); }
+
+.ripple-el{
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  transform: scale(0);
+  animation: ripple 600ms var(--ease-out);
+  pointer-events: none;
+}
+
+.project-card:hover,
+.skill-card:hover,
+.contact-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(var(--accent-rgb), 0.5);
+}
+
+.project-card{
+  --mx: 50%; --my: 50%;
+}
+.project-card::before{
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(320px circle at var(--mx) var(--my), rgba(var(--accent-rgb), 0.85), transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-out);
+  pointer-events: none;
+}
+.project-card:hover::before{ opacity: 1; }
+
+.project-card__glow{
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(280px circle at var(--mx) var(--my), rgba(var(--accent-rgb), 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity var(--dur-med) var(--ease-out);
+  pointer-events: none;
+}
+.project-card:hover .project-card__glow{ opacity: 1; }
+
+.social-icon:hover, .contact-card:hover .contact-card__icon{
+  transform: scale(1.08) rotate(-4deg);
+  color: var(--accent);
+}
+
+.nav-link{ position: relative; }
+.nav-link::after{
+  content:'';
+  position: absolute;
+  left: 0; right: 100%;
+  bottom: -4px;
+  height: 1px;
+  background: var(--accent);
+  transition: right var(--dur-med) var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.is-active::after{ right: 0; }
+.nav-link.is-active{ color: var(--accent); }
+
+.filter-btn.is-active{
+  background: var(--accent);
+  color: var(--bg-void);
+  border-color: var(--accent);
+}
+
+.skill-card:hover .skill-card__icon{
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.back-to-top:hover{ transform: translateY(-4px); }
+
+.theme-toggle:hover{ border-color: var(--accent); }

@@ -1,0 +1,22 @@
+/* ==========================================================================
+   LIGHT THEME OVERRIDES
+   ========================================================================== */
+[data-theme="light"] .hero-bg{
+  opacity: 0.55;
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-card,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .stat-card{
+  box-shadow: 0 16px 32px -22px rgba(30,30,20,0.18);
+}
+
+[data-theme="light"] .navbar.is-scrolled{
+  box-shadow: 0 10px 26px -20px rgba(30,30,20,0.2);
+}
+
+[data-theme="light"] .faint-grid{ opacity: 0.35; }
+
+[data-theme="light"] ::-webkit-scrollbar-thumb{ border-color: var(--bg-void); }

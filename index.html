@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Underscore_ &amp; Portfolio</title>
+<meta name="author" content="underscore">
+<meta name="theme-color" content="#0a0e0f">
+<link rel="canonical" href="https://github.com/underscore0000">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="underscore — Cyber Security Researcher &amp; Software Developer">
+<meta property="og:description" content="Malware analysis, reverse engineering, firmware inspection and cryptography — projects and tooling.">
+<meta property="og:image" content="assets/images/logos/og-cover.png">
+<meta property="og:url" content="https://Underscore0000.github.io/">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="underscore — Cyber Security Researcher &amp; Software Developer">
+<meta name="twitter:description" content="Malware analysis, reverse engineering, firmware inspection and cryptography — projects and tooling.">
+<meta name="twitter:image" content="assets/images/logos/og-cover.png">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Site styles -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-loading">
+
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__mark mono">BOOTING WORKSPACE…</div>
+  <div class="loader__bar"><span></span></div>
+  <div class="loader__pct mono" id="loader-pct">0%</div>
+</div>
+
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+
+<header class="navbar">
+  <div class="container-wide navbar__inner">
+    <a href="#home" class="brand">
+      <span class="logo-mark">_</span>
+      <span>underscore<small>Software_Developer & Hacker</small></span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#home"><span class="idx">0x00</span>Home</a></li>
+        <li><a class="nav-link" href="#about"><span class="idx">0x01</span>About</a></li>
+        <li><a class="nav-link" href="#projects"><span class="idx">0x02</span>Projects</a></li>
+        <li><a class="nav-link" href="#skills"><span class="idx">0x03</span>Skills</a></li>
+        <li><a class="nav-link" href="#contact"><span class="idx">0x04</span>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+        <i class="bi bi-sun-fill icon-sun"></i>
+        <i class="bi bi-moon-stars-fill icon-moon"></i>
+      </button>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="nav-scrim"></div>
+<aside class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+  <ul>
+    <li><a class="nav-link" href="#home"><span class="idx">0x00</span>Home</a></li>
+    <li><a class="nav-link" href="#about"><span class="idx">0x01</span>About</a></li>
+    <li><a class="nav-link" href="#projects"><span class="idx">0x02</span>Projects</a></li>
+    <li><a class="nav-link" href="#skills"><span class="idx">0x03</span>Skills</a></li>
+    <li><a class="nav-link" href="#contact"><span class="idx">0x04</span>Contact</a></li>
+  </ul>
+</aside>
+
+<main>
+
+
+  <section class="hero" id="home" data-addr="0x00 // HOME">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+    </div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="faint-grid" aria-hidden="true"></div>
+
+    <div class="container-wide hero__inner">
+      <div>
+        <div class="hero__status">
+          <span class="dot"></span> status: online · lab time-zone UTC+1
+        </div>
+        <h1>Breaking software down<br><span class="grad">to understand it.</span></h1>
+
+        <div class="hero__type">
+          <span class="brackets">&gt;</span>
+          <span id="typing-text"></span><span class="caret"></span>
+        </div>
+
+        <p class="hero__desc">
+          Advanced software development and tools for cybersecurity, reverse engineering and systems analysis. Through open-source projects, I build solutions designed to simplify complex technical tasks, test new methodologies, and contribute to the evolution of the cybersecurity ecosystem.
+
+        </p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn-primary"><i class="bi bi-terminal"></i> View Projects</a>
+          <a href="#contact" class="btn btn-ghost"><i class="bi bi-chat-dots"></i> Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="disasm-panel">
+  <div class="disasm-panel__head">
+    <div class="disasm-panel__dots"><span></span><span></span><span></span></div>
+    <div class="disasm-panel__title mono">portfolio.s — main()</div>
+    <i class="bi bi-shield-lock text-dim"></i>
+  </div>
+  <div class="disasm-panel__body">
+    <div class="disasm-panel__scan"></div>
+    <div class="disasm-line"><span class="addr">0x1000</span><span class="op">push</span><span class="args">rbp</span></div>
+    <div class="disasm-line"><span class="addr">0x1001</span><span class="op">mov</span><span class="args">rbp,rsp</span></div>
+    <div class="disasm-line"><span class="addr">0x1004</span><span class="op">lea</span><span class="args">rdi,[rip+msg]</span></div>
+    <div class="disasm-line"><span class="addr">0x1008</span><span class="op">call</span><span class="args">print</span></div>
+    <div class="disasm-line"><span class="addr">0x100d</span><span class="op">xor</span><span class="args">eax,eax</span></div>
+    <div class="disasm-line"><span class="addr">0x100f</span><span class="op">leave</span><span class="args"></span></div>
+    <div class="disasm-line"><span class="addr">0x1010</span><span class="op">ret</span><span class="args"></span></div>
+    <div class="disasm-line"><span class="addr">0x1011</span><span class="op">print:</span><span class="args">mov rax,1</span></div>
+    <div class="disasm-line"><span class="addr">0x1014</span><span class="op">mov</span><span class="args">rdi,1</span></div>
+    <div class="disasm-line"><span class="addr">0x1017</span><span class="op">mov</span><span class="args">rsi,[rbp+0x10]</span></div>
+    <div class="disasm-line"><span class="addr">0x101b</span><span class="op">mov</span><span class="args">rdx,0x18</span></div>
+    <div class="disasm-line"><span class="addr">0x101e</span><span class="op">syscall</span><span class="args"></span></div>
+    <div class="disasm-line"><span class="addr">0x1020</span><span class="op">ret</span><span class="args"></span></div>
+    <div class="disasm-line"><span class="addr">0x1021</span><span class="op">msg:</span><span class="args">db "Hi,there is my portfolio",0xa</span></div>
+  </div>
+</div>
+
+    <a href="#about" class="hero__scroll-cue">
+      <span>Scroll</span>
+      <span class="stick float-el"></span>
+    </a>
+  </section>
+
+
+  <section class="section" id="about" data-addr="0x01 // ABOUT">
+    <div class="container-wide section-inner grid-offset">
+      <div class="eyebrow reveal">Offset 0x01</div>
+      <h2 class="section-title reveal reveal-delay-1">About me</h2>
+
+      <div class="about__grid">
+        <div class="about__portrait reveal reveal-delay-1">
+          <img src="assets/images/profile/profile.jpg" alt="Portrait placeholder"
+               onerror="this.style.display='none'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner br"></div>
+          <div class="tag-float">
+            <span class="tag"><span class="dot" style="margin-right:6px;"></span>Available for collabs</span>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="reveal reveal-delay-2">
+            My work focuses on building software for low-level penetration testing, ethical hacking, and offensive security research. I'm particularly interested in understanding how systems behave beneath their abstractions, whether that means interacting directly with operating system internals, network protocols, or native binaries.
+
+Most of my projects are designed to solve practical problems: developing tools that automate repetitive tasks, simplify security assessments, or provide a deeper understanding of how modern systems operate. I enjoy turning complex technical concepts into efficient, reliable software that security professionals can actually use.
+          </p>
+          <p class="reveal reveal-delay-3">
+            GitHub serves as a living archive of that work. It contains open-source tools, experimental projects, and research-driven utilities that reflect my interest in systems programming, cybersecurity, and low-level software development. Every project is an opportunity to explore new techniques, refine engineering practices, and contribute practical solutions to the security community.
+          </p>
+
+          <div class="stats-row" id="stats-row">
+
+            <div class="stat-card reveal reveal-delay-1">
+              <span class="stat-card__num" data-count="25+">0</span>
+              <span class="stat-card__label">Projects</span>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+              <span class="stat-card__num" data-count="11+">0</span>
+              <span class="stat-card__label">Languages</span>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+              <span class="stat-card__num" data-count="4+">0</span>
+              <span class="stat-card__label">Years Learning</span>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+              <span class="stat-card__num" data-count="10+">0</span>
+              <span class="stat-card__label">Open Source</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="projects" data-addr="0x02 // PROJECTS">
+    <div class="container-wide section-inner grid-offset">
+      <div class="eyebrow reveal">Offset 0x02</div>
+      <h2 class="section-title reveal reveal-delay-1">Selected projects</h2>
+      <p class="lede reveal reveal-delay-1">
+        These are a small part of the great projects I have ever created in these years 
+      </p>
+
+      <div class="projects__filters reveal reveal-delay-2" id="projects-filters" role="tablist" aria-label="Filter projects">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="DarkResearcher-Applications">DarkResearcher-Applications</button>
+        <button class="filter-btn" data-filter="Ransomware">Ransomware</button>
+        <button class="filter-btn" data-filter="Tools">Tools</button>
+      </div>
+
+      <div class="projects__grid" id="projects-grid">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" data-addr="0x03 // SKILLS">
+    <div class="container-wide section-inner grid-offset">
+      <div class="eyebrow reveal">Offset 0x03</div>
+      <h2 class="section-title reveal reveal-delay-1">Languages &amp; tooling</h2>
+      <p class="lede reveal reveal-delay-1">
+        A working set, not an exhaustive one — the languages and runtimes I reach
+        for most often, from low-level analysis to shipping full applications.
+      </p>
+
+      <div class="skills__grid" id="skills-grid">
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="contact" data-addr="0x04 // CONTACT" style="border-bottom:none;">
+    <div class="container-wide section-inner grid-offset">
+      <div class="eyebrow reveal">Offset 0x04</div>
+      <h2 class="section-title reveal reveal-delay-1">Get in touch</h2>
+      <p class="lede reveal reveal-delay-1">
+        Open to research collaborations, CTF teams, and interesting reverse-engineering
+        problems. Reach out on either channel below.
+      </p>
+
+      <div class="contact__grid" id="contact-grid">
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer container-wide">
+  <div class="site-footer__inner">
+    <div class="site-footer__meta">
+      © <span id="year">2026</span> Underscore — Built with HTML, CSS, JavaScript &amp; Bootstrap · All Rights Reserved
+    </div>
+    <div class="site-footer__links">
+      <a href="#home">Back to top</a>
+      <a href="https://t.me/underscore000_" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://discord.com/users/1100417701207363715" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Site scripts -->
+<script src="assets/js/config.js"></script>
+<script src="assets/js/utilities.js"></script>
+<script src="assets/js/loader.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/typing.js"></script>
+<script src="assets/js/scroll.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/cursor.js"></script>
+<script src="assets/js/projects.js"></script>
+<script src="assets/js/skills.js"></script>
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/observer.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

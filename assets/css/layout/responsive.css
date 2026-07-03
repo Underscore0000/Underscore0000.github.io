@@ -1,0 +1,29 @@
+/* ==========================================================================
+   RESPONSIVE — cross-cutting breakpoints
+   ========================================================================== */
+@media (max-width: 992px){
+  .nav-links{ display: none; }
+  .nav-burger{ display: flex; }
+  .section{ padding-block: var(--sp-8); }
+}
+
+@media (max-width: 767px){
+  .container-wide{ padding-inline: var(--sp-4); }
+  .hero__cta{ flex-direction: column; align-items: stretch; }
+  .hero__cta .btn{ justify-content: center; }
+  .stats-row{ grid-template-columns: 1fr 1fr; }
+  .site-footer__inner{ flex-direction: column; text-align: center; }
+  .back-to-top{ right: var(--sp-4); bottom: var(--sp-4); width: 42px; height: 42px; }
+}
+
+@media (max-width: 480px){
+  .disasm-panel__body{ font-size: 11px; }
+  .disasm-line{ grid-template-columns: 50px 36px 1fr; gap: 8px; }
+}
+
+@media print{
+  .navbar, .back-to-top, .scroll-progress, .loader, .cursor-dot, .cursor-ring, #particles-canvas{
+    display: none !important;
+  }
+  body{ background: #fff; color: #000; }
+}

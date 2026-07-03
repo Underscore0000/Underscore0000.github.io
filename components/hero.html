@@ -1,0 +1,58 @@
+  <section class="hero" id="home" data-addr="0x00 // HOME">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+    </div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="faint-grid" aria-hidden="true"></div>
+
+    <div class="container-wide hero__inner">
+      <div>
+        <div class="hero__status">
+          <span class="dot"></span> status: online · lab time-zone UTC+1
+        </div>
+        <h1>Breaking software down<br><span class="grad">to understand it.</span></h1>
+
+        <div class="hero__type">
+          <span class="brackets">&gt;</span>
+          <span id="typing-text"></span><span class="caret"></span>
+        </div>
+
+        <p class="hero__desc">
+        </p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn-primary"><i class="bi bi-terminal"></i> View Projects</a>
+          <a href="#contact" class="btn btn-ghost"><i class="bi bi-chat-dots"></i> Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="disasm-panel">
+        <div class="disasm-panel__head">
+          <div class="disasm-panel__dots"><span></span><span></span><span></span></div>
+          <div class="disasm-panel__title mono">sample.bin — main()</div>
+          <i class="bi bi-shield-lock text-dim"></i>
+        </div>
+        <div class="disasm-panel__body">
+          <div class="disasm-panel__scan"></div>
+          <div class="disasm-line"><span class="addr">0x1a2f</span><span class="op">push</span><span class="args">rbp</span></div>
+          <div class="disasm-line"><span class="addr">0x1a30</span><span class="op">mov</span><span class="args">rbp, rsp</span></div>
+          <div class="disasm-line"><span class="addr">0x1a33</span><span class="op">sub</span><span class="args">rsp, 0x40</span></div>
+          <div class="disasm-line hl"><span class="addr">0x1a37</span><span class="op">call</span><span class="args">decrypt_stage1</span><span class="comment">; suspicious</span></div>
+          <div class="disasm-line"><span class="addr">0x1a3c</span><span class="op">test</span><span class="args">eax, eax</span></div>
+          <div class="disasm-line"><span class="addr">0x1a3e</span><span class="op">jne</span><span class="args">0x1a5f</span></div>
+          <div class="disasm-line"><span class="addr">0x1a40</span><span class="op">lea</span><span class="args">rdi, [rip+0x8f2]</span></div>
+          <div class="disasm-line"><span class="addr">0x1a47</span><span class="op">call</span><span class="args">log_event</span></div>
+          <div class="disasm-line"><span class="addr">0x1a4c</span><span class="op">xor</span><span class="args">eax, eax</span></div>
+          <div class="disasm-line"><span class="addr">0x1a4e</span><span class="op">leave</span><span class="args"></span></div>
+          <div class="disasm-line"><span class="addr">0x1a4f</span><span class="op">ret</span><span class="args"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll-cue">
+      <span>Scroll</span>
+      <span class="stick float-el"></span>
+    </a>
+  </section>

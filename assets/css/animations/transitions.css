@@ -1,0 +1,33 @@
+/* ==========================================================================
+   TRANSITIONS
+   ========================================================================== */
+a, button, .btn, .card, .project-card, .skill-card, .contact-card,
+.nav-link, .theme-toggle, .stat-card, .filter-btn, input, textarea{
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    opacity var(--dur-med) var(--ease-out);
+}
+
+.reveal{
+  opacity: 0;
+}
+.reveal.is-visible{
+  animation: fade-up var(--dur-slow) var(--ease-out) forwards;
+}
+.reveal.is-visible.blur{
+  animation: blur-reveal var(--dur-slow) var(--ease-out) forwards;
+}
+.reveal.is-visible.zoom{
+  animation: scale-in var(--dur-slow) var(--ease-out) forwards;
+}
+
+.reveal-delay-1{ animation-delay: 80ms !important; }
+.reveal-delay-2{ animation-delay: 160ms !important; }
+.reveal-delay-3{ animation-delay: 240ms !important; }
+.reveal-delay-4{ animation-delay: 320ms !important; }
+.reveal-delay-5{ animation-delay: 400ms !important; }
+.reveal-delay-6{ animation-delay: 480ms !important; }

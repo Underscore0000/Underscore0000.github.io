@@ -1,0 +1,50 @@
+/* ==========================================================================
+   SEMANTIC COLOR APPLICATION + THEME TRANSITION
+   ========================================================================== */
+html{
+  background-color: var(--bg-void);
+}
+
+body{
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+}
+
+
+body,
+.navbar,
+.panel,
+.card,
+.btn,
+.section,
+.hairline,
+.stat-card,
+.skill-card,
+.project-card,
+.contact-card{
+  transition:
+    background-color var(--dur-med) var(--ease-in-out),
+    border-color var(--dur-med) var(--ease-in-out),
+    color var(--dur-med) var(--ease-in-out),
+    box-shadow var(--dur-med) var(--ease-in-out);
+}
+
+::selection{
+  background: rgba(var(--accent-rgb), 0.28);
+  color: var(--text-primary);
+}
+
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: var(--bg-void); }
+::-webkit-scrollbar-thumb{
+  background: var(--line);
+  border-radius: var(--r-full);
+  border: 2px solid var(--bg-void);
+}
+::-webkit-scrollbar-thumb:hover{ background: var(--accent); }
+
+:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

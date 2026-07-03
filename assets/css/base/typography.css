@@ -1,0 +1,66 @@
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+body{
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: -0.011em;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h1{ font-size: var(--fs-3xl); }
+h2{ font-size: var(--fs-2xl); }
+h3{ font-size: var(--fs-lg); }
+h4{ font-size: var(--fs-md); }
+
+p{ color: var(--text-secondary); }
+
+.text-dim{ color: var(--text-dim); }
+.text-accent{ color: var(--accent); }
+
+
+.eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eyebrow::before{
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+.section-title{
+  margin-top: var(--sp-3);
+  margin-bottom: var(--sp-6);
+  max-width: 640px;
+}
+
+.mono{ font-family: var(--font-mono); }
+
+.lede{
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  line-height: 1.55;
+  max-width: 620px;
+}
+
+@media (max-width: 767px){
+  h2{ font-size: 2.1rem; }
+}

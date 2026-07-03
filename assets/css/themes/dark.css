@@ -1,0 +1,22 @@
+/* ==========================================================================
+   DARK THEME OVERRIDES
+   ========================================================================== */
+[data-theme="dark"] .hero-bg{
+  opacity: 1;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .skill-card,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .stat-card{
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.6);
+}
+
+[data-theme="dark"] .navbar.is-scrolled{
+  box-shadow: 0 10px 30px -20px rgba(0,0,0,0.7);
+}
+
+[data-theme="dark"] .logo-mark{
+  filter: drop-shadow(0 0 10px rgba(var(--accent-rgb), 0.45));
+}
